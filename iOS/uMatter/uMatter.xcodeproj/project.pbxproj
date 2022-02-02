@@ -7,24 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98A0324727A4B0CC00B97D57 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0324627A4B0CC00B97D57 /* SettingsView.swift */; };
+		98A0324927A4B1B700B97D57 /* AccentColorGradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A0324827A4B1B700B97D57 /* AccentColorGradientExtension.swift */; };
 		98A184F127A373D500ABCA12 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A184F027A373D500ABCA12 /* OnBoardingView.swift */; };
 		98A184F327A3747400ABCA12 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A184F227A3747400ABCA12 /* UIScreenExtension.swift */; };
 		98A184F727A38F1B00ABCA12 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A184F627A38F1B00ABCA12 /* ImageAssets.xcassets */; };
+		98A184FB27A398A900ABCA12 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A184FA27A398A900ABCA12 /* HomeView.swift */; };
+		98A184FD27A39C1100ABCA12 /* PostComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A184FC27A39C1100ABCA12 /* PostComponent.swift */; };
 		98EEFB7027A317C900356338 /* uMatterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEFB6F27A317C900356338 /* uMatterApp.swift */; };
-		98EEFB7227A317C900356338 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEFB7127A317C900356338 /* ContentView.swift */; };
 		98EEFB7427A317CC00356338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EEFB7327A317CC00356338 /* Assets.xcassets */; };
 		98EEFB7727A317CC00356338 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EEFB7627A317CC00356338 /* Preview Assets.xcassets */; };
+		98F3183D27A480FA008C50C3 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3183C27A480FA008C50C3 /* CreatePostView.swift */; };
+		98F3183F27A48915008C50C3 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3183E27A48915008C50C3 /* PostDetailsView.swift */; };
+		98F3184627A48A07008C50C3 /* PostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98F3184427A48A07008C50C3 /* PostData.xcdatamodeld */; };
+		98F3184827A48A27008C50C3 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3184727A48A27008C50C3 /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98A0324627A4B0CC00B97D57 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		98A0324827A4B1B700B97D57 /* AccentColorGradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColorGradientExtension.swift; sourceTree = "<group>"; };
 		98A184F027A373D500ABCA12 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		98A184F227A3747400ABCA12 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		98A184F627A38F1B00ABCA12 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
+		98A184FA27A398A900ABCA12 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		98A184FC27A39C1100ABCA12 /* PostComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComponent.swift; sourceTree = "<group>"; };
 		98EEFB6C27A317C900356338 /* uMatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uMatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EEFB6F27A317C900356338 /* uMatterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uMatterApp.swift; sourceTree = "<group>"; };
-		98EEFB7127A317C900356338 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		98EEFB7327A317CC00356338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98EEFB7627A317CC00356338 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98F3183C27A480FA008C50C3 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		98F3183E27A48915008C50C3 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		98F3184527A48A07008C50C3 /* PostData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostData.xcdatamodel; sourceTree = "<group>"; };
+		98F3184727A48A27008C50C3 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,7 @@
 		98EEFB6E27A317C900356338 /* uMatter */ = {
 			isa = PBXGroup;
 			children = (
+				98F3184027A48942008C50C3 /* Model */,
 				98EEFB8227A317F900356338 /* Data */,
 				98EEFB8127A317F300356338 /* Extensions */,
 				98EEFB8027A317EE00356338 /* Components */,
@@ -87,8 +102,11 @@
 		98EEFB7E27A317E300356338 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				98EEFB7127A317C900356338 /* ContentView.swift */,
 				98A184F027A373D500ABCA12 /* OnBoardingView.swift */,
+				98A184FA27A398A900ABCA12 /* HomeView.swift */,
+				98F3183C27A480FA008C50C3 /* CreatePostView.swift */,
+				98F3183E27A48915008C50C3 /* PostDetailsView.swift */,
+				98A0324627A4B0CC00B97D57 /* SettingsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -105,6 +123,7 @@
 		98EEFB8027A317EE00356338 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				98A184FC27A39C1100ABCA12 /* PostComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -113,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				98A184F227A3747400ABCA12 /* UIScreenExtension.swift */,
+				98A0324827A4B1B700B97D57 /* AccentColorGradientExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -120,8 +140,17 @@
 		98EEFB8227A317F900356338 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				98F3184427A48A07008C50C3 /* PostData.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		98F3184027A48942008C50C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98F3184727A48A27008C50C3 /* PostModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +225,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A184F127A373D500ABCA12 /* OnBoardingView.swift in Sources */,
+				98F3184827A48A27008C50C3 /* PostModel.swift in Sources */,
+				98F3183F27A48915008C50C3 /* PostDetailsView.swift in Sources */,
 				98A184F327A3747400ABCA12 /* UIScreenExtension.swift in Sources */,
-				98EEFB7227A317C900356338 /* ContentView.swift in Sources */,
+				98F3183D27A480FA008C50C3 /* CreatePostView.swift in Sources */,
+				98A0324727A4B0CC00B97D57 /* SettingsView.swift in Sources */,
+				98A184FD27A39C1100ABCA12 /* PostComponent.swift in Sources */,
+				98F3184627A48A07008C50C3 /* PostData.xcdatamodeld in Sources */,
+				98A184FB27A398A900ABCA12 /* HomeView.swift in Sources */,
+				98A0324927A4B1B700B97D57 /* AccentColorGradientExtension.swift in Sources */,
 				98EEFB7027A317C900356338 /* uMatterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +437,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		98F3184427A48A07008C50C3 /* PostData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				98F3184527A48A07008C50C3 /* PostData.xcdatamodel */,
+			);
+			currentVersion = 98F3184527A48A07008C50C3 /* PostData.xcdatamodel */;
+			path = PostData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 98EEFB6427A317C900356338 /* Project object */;
 }

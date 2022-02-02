@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct uMatterApp: App {
+    @AppStorage("FinishOnBoarding") var finishOnBoarding : Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            OnBoardingView()
+            
+            if finishOnBoarding {
+                TabView {
+                    HomeView()
+                        .tabItem {
+                            Image(systemName: "house.fill")
+                            Text("Menu")
+                        }
+                    
+                    SettingsView()
+                        .tabItem {
+                            Image(systemName: "gear")
+                            Text("Settings")
+                        }
+                }
+            } else {
+                OnBoardingView()
+            }
         }
     }
 }

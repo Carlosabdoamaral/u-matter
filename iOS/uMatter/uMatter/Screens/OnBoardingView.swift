@@ -210,6 +210,7 @@ struct OnBoardingView2 : View {
     
     @AppStorage("OnBoardingViewID") var OnBoardingViewID : Int = 2
     @AppStorage("languageId") var languageId : Int = 0
+    @AppStorage("FinishOnBoarding") var finishOnBoarding : Bool = false
     
     @State private var welcomeTitle : String = "Hello!"
     @State private var smallObservation : String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget purus tortor. Donec egestas consectetur orci, semper sodales odio semper at"
@@ -270,7 +271,7 @@ struct OnBoardingView2 : View {
                     Spacer()
                     
                     Button {
-                        
+                        self.finishOnBoarding = true
                     } label: {
                         Text("\(self.buttonText)")
                             .fontWeight(.semibold)
