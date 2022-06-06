@@ -33,8 +33,8 @@ struct CreatePostView: View {
                     }
 
                 }
-                .listStyle(.grouped)
-
+//                .listStyle(.grouped)
+                
             }
             .navigationTitle("What happened?")
             .toolbar {

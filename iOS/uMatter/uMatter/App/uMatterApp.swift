@@ -15,19 +15,21 @@ struct uMatterApp: App {
         WindowGroup {
             
             if finishOnBoarding {
-                TabView {
-                    HomeView()
-                        .tabItem {
-                            Image(systemName: "house.fill")
-                            Text("Menu")
-                        }
-                    
-                    SettingsView()
-                        .tabItem {
-                            Image(systemName: "gear")
-                            Text("Settings")
-                        }
-                }
+//                TabView {
+//                    HomeView()
+//                        .tabItem {
+//                            Image(systemName: "house.fill")
+//                            Text("Menu")
+//                        }
+//
+//                    SettingsView()
+//                        .tabItem {
+//                            Image(systemName: "gear")
+//                            Text("Settings")
+//                        }
+//                }
+                
+                HomeView()
             } else {
                 OnBoardingView()
             }

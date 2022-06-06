@@ -6,23 +6,21 @@
 //
 
 import SwiftUI
+import CloudKit
 
 struct HomeView: View {
-    @AppStorage("languageId") var languageId : Int = 0
+//    @AppStorage("languageId") var languageId : Int = 0
     @AppStorage("isCreatingPost") private var isCreatingPost : Bool = false
-    @State private var isShowingPostDetails : Bool = false
+    @AppStorage("isShowingPostDetails") var isShowingPostDetails : Bool = false
     @State private var NavigationViewTitleText : String = "Home"
     
-    func CreatePost() {
-        self.isCreatingPost.toggle()
-    }
+    func CreatePost() { self.isCreatingPost.toggle() }
     
     var body: some View {
         NavigationView {
             ZStack {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
-                        
                         VStack {
                             ForEach(0..<10) { i in
                                 Divider()
@@ -32,7 +30,7 @@ struct HomeView: View {
                                     ImageIndex: Int.random(in: 0..<9)
                                 )
                                 .sheet(isPresented: $isShowingPostDetails) {
-                                    PostDetailsView(PostInfos: PostTemplate)
+                                    PostDetailsView()
                                 }
                                 .onTapGesture {
                                     self.isShowingPostDetails.toggle()
@@ -42,9 +40,9 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationTitle("Home")
-            .navigationBarItems(
-                trailing:
+            .navigationTitle("uMatter")
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
                     HStack {
                         Image(systemName: "plus")
                             .onTapGesture(perform: CreatePost)
@@ -54,11 +52,18 @@ struct HomeView: View {
                                 CreatePostView()
                             }
                     }
-            )
+                }
+                
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    NavigationLink {
+                        ProfileView()
+                    } label: {
+                        Image(systemName: "person.fill")
+                    }
+
+                }
+            }
         }
-//        .onTapGesture {
-//            CheckLanguage()
-//        }
     }
 }
 
