@@ -21,6 +21,10 @@
 		98F3183F27A48915008C50C3 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3183E27A48915008C50C3 /* PostDetailsView.swift */; };
 		98F3184627A48A07008C50C3 /* PostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98F3184427A48A07008C50C3 /* PostData.xcdatamodeld */; };
 		98F3184827A48A27008C50C3 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3184727A48A27008C50C3 /* PostModel.swift */; };
+		C0C0BD41284D997A004F035D /* PostTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0BD40284D997A004F035D /* PostTemplate.swift */; };
+		C0C0BD43284D99FD004F035D /* IconsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0BD42284D99FD004F035D /* IconsTemplate.swift */; };
+		C0C0BD45284D9A36004F035D /* ColorsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0BD44284D9A36004F035D /* ColorsTemplate.swift */; };
+		C0C0BD4B284DA42F004F035D /* CreatePostFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0BD4A284DA42F004F035D /* CreatePostFunc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		98F3183E27A48915008C50C3 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		98F3184527A48A07008C50C3 /* PostData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostData.xcdatamodel; sourceTree = "<group>"; };
 		98F3184727A48A27008C50C3 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		C0C0BD40284D997A004F035D /* PostTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTemplate.swift; sourceTree = "<group>"; };
+		C0C0BD42284D99FD004F035D /* IconsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsTemplate.swift; sourceTree = "<group>"; };
+		C0C0BD44284D9A36004F035D /* ColorsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTemplate.swift; sourceTree = "<group>"; };
+		C0C0BD4A284DA42F004F035D /* CreatePostFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreatePostFunc.swift; path = ../../../../../CreatePostFunc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,8 @@
 		98EEFB6E27A317C900356338 /* uMatter */ = {
 			isa = PBXGroup;
 			children = (
+				C0C0BD49284DA417004F035D /* Func */,
+				C0C0BD3F284D996B004F035D /* Template */,
 				98F3184027A48942008C50C3 /* Model */,
 				98EEFB8227A317F900356338 /* Data */,
 				98EEFB8127A317F300356338 /* Extensions */,
@@ -153,6 +163,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C0C0BD3F284D996B004F035D /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				C0C0BD40284D997A004F035D /* PostTemplate.swift */,
+				C0C0BD42284D99FD004F035D /* IconsTemplate.swift */,
+				C0C0BD44284D9A36004F035D /* ColorsTemplate.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		C0C0BD49284DA417004F035D /* Func */ = {
+			isa = PBXGroup;
+			children = (
+				C0C0BD4A284DA42F004F035D /* CreatePostFunc.swift */,
+			);
+			path = Func;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,9 +260,13 @@
 				98A0324727A4B0CC00B97D57 /* SettingsView.swift in Sources */,
 				98A184FD27A39C1100ABCA12 /* PostComponent.swift in Sources */,
 				98F3184627A48A07008C50C3 /* PostData.xcdatamodeld in Sources */,
+				C0C0BD4B284DA42F004F035D /* CreatePostFunc.swift in Sources */,
+				C0C0BD43284D99FD004F035D /* IconsTemplate.swift in Sources */,
+				C0C0BD45284D9A36004F035D /* ColorsTemplate.swift in Sources */,
 				98A184FB27A398A900ABCA12 /* HomeView.swift in Sources */,
 				98A0324927A4B1B700B97D57 /* AccentColorGradientExtension.swift in Sources */,
 				98EEFB7027A317C900356338 /* uMatterApp.swift in Sources */,
+				C0C0BD41284D997A004F035D /* PostTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,71 +8,52 @@
 import SwiftUI
 
 struct CreatePostView: View {
-    @AppStorage("isCreatingPost") var isCreatingPost : Bool = false
-    @State private var postTitle : String = ""
-    @State private var postContent : String = ""
     
-    @State private var ColorsArr : [Color] = [.blue.opacity(0.4), .green.opacity(0.4), .red.opacity(0.4), .pink.opacity(0.4)]
-    @State private var Gradient : LinearGradient = LinearGradient(colors: [.blue.opacity(0.4), .accentColor.opacity(0.8) ], startPoint: .topLeading, endPoint: .bottomTrailing)
-    
-    init() { UITextView.appearance().backgroundColor = .clear }
+    @State private var _title : String = ""
+    @State private var _content : String = ""
+    @State private var _private : Bool = false
+    @State private var _comments : Bool = false
+    @State private var _date : Date = Date.now
+    @AppStorage("isCreatingPost") private var isCreatingPost : Bool = false
     
     var body: some View {
-        ZStack {
+        NavigationView {
             VStack {
-                
-                VStack(alignment: .center) {
-                    Text("Create your post")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .frame(width: UIScreen.maxWidth - 140)
-                        .multilineTextAlignment(.center)
-                }
-                .frame(width: UIScreen.maxWidth, height: UIScreen.maxHeight - 600)
-                .background(Gradient)
-                
-                
-                TextField("your title...", text: $postTitle)
-                    .padding()
-                    .background(.gray.opacity(0.2))
-                    .cornerRadius(15)
-                    .padding([.top, .horizontal])
-                
-                TextEditor(text: $postContent)
-                    .padding()
-                    .background(.gray.opacity(0.2))
-                    .cornerRadius(15)
-                    .padding()
-                
-                Spacer()
-                
-                HStack {
-                    
-                    Button {
-                        
-                    } label: {
-                        Text("Cancel")
-                            .onTapGesture {
-                                self.isCreatingPost = false
-                            }
+                List {
+                    Section(header: Text("Details").font(.headline).fontWeight(.light)) {
+                        TextField("Title...", text: $_title)
+                        TextEditor(text: $_content)
+                            .frame(minHeight: 150)
                     }
                     
-                    Spacer()
-                    
-                    Button {
-                        
-                    } label: {
-                        Text("Post")
-                            .fontWeight(.semibold)
+                    Section(header: Text("Settings").font(.headline).fontWeight(.light)) {
+                        DatePicker("Date", selection: $_date)
+                        Toggle(isOn: $_private) { Text("Private") }
+                        Toggle(isOn: $_comments) { Text("Comments") }
                     }
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 50)
-                    .foregroundColor(.white)
-                    .background(Color.accentColor)
-                    .cornerRadius(5)
 
                 }
-                .padding(.horizontal)
+                .listStyle(.grouped)
+
+            }
+            .navigationTitle("What happened?")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        self.isCreatingPost = false
+                    } label: {
+                        Text("Cancel")
+                            .foregroundColor(.red)
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        CreatePostFunc()
+                    } label: {
+                        Text("Post")
+                    }
+                }
             }
         }
     }
