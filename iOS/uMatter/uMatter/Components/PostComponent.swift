@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PostComponent: View {    
     @State private var liked : Bool = false
+    @State var PostInfos : Post
     
-    var PostInfos : PostModel = PostModel(date: Date(), title: "Title", content: "Content")
     var ImageColorIndex : Int = 2
     var ImageIndex : Int = 2
     
@@ -26,23 +26,23 @@ struct PostComponent: View {
                     .foregroundColor(colorsTemplate[ImageColorIndex])
                 
                 VStack(alignment: .leading) {
-                    Text(PostInfos.title)
+                    Text(PostInfos.title ?? "Loading...")
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
-                    HStack {
-                        Image(systemName: "calendar")
-                        Text("\(PostInfos.date)")
-                            .lineLimit(1)
-                    }
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
+//                    HStack {
+//                        Image(systemName: "calendar")
+//                        Text("\(PostInfos.date!)")
+//                            .lineLimit(1)
+//                    }
+//                    .font(.footnote)
+//                    .foregroundColor(.secondary)
                 }
                 Spacer()
             }
             
             
             //MARK: CONTENT POST
-            Text(PostInfos.content)
+            Text(PostInfos.content ?? "Loading...")
                 .font(.subheadline)
                 .multilineTextAlignment(.leading)
                 .lineLimit(4)
@@ -76,9 +76,9 @@ struct PostComponent: View {
     }
 }
 
-struct PostComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        PostComponent()
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct PostComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PostComponent()
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

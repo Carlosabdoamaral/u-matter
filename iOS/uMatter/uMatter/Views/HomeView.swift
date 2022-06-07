@@ -14,6 +14,9 @@ struct HomeView: View {
     @AppStorage("isShowingPostDetails") var isShowingPostDetails : Bool = false
     @State private var NavigationViewTitleText : String = "Home"
     
+    //MARK: REMOVER
+    @FetchRequest(sortDescriptors: []) var posts : FetchedResults<Post>
+    
     func CreatePost() { self.isCreatingPost.toggle() }
     
     var body: some View {
@@ -22,15 +25,15 @@ struct HomeView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
                         VStack {
-                            ForEach(0..<10) { i in
+                            ForEach(posts) { p in
                                 Divider()
                                 PostComponent(
-                                    PostInfos: PostTemplate,
+                                    PostInfos: p,
                                     ImageColorIndex: Int.random(in: 0..<13),
                                     ImageIndex: Int.random(in: 0..<9)
                                 )
                                 .sheet(isPresented: $isShowingPostDetails) {
-                                    PostDetailsView()
+                                    PostDetailsView(post: p)
                                 }
                                 .onTapGesture {
                                     self.isShowingPostDetails.toggle()

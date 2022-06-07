@@ -11,12 +11,15 @@ struct PostDetailsView: View {
     @State private var liked : Bool = false
     @State private var commented : Bool = false
     
+    var post : Post!
+    
     var body: some View {
         NavigationView {
             
             VStack {
                 List {
-                    Section { Text(PostTemplate.content) } header: { }
+                    Section { Text(self.post.content!
+                    ) } header: { }
                 }
                 .listStyle(.insetGrouped)
                     
@@ -30,14 +33,6 @@ struct PostDetailsView: View {
                     Spacer()
                     
                     Button {
-                        self.commented.toggle()
-                    } label: {
-                        self.commented ? Image(systemName: "text.bubble.fill") : Image(systemName: "text.bubble")
-                    }
-                    
-                    Spacer()
-                    
-                    Button {
                     } label: {
                         Image(systemName: "paperplane")
                     }
@@ -46,7 +41,7 @@ struct PostDetailsView: View {
                 .padding()
                 .padding(.horizontal)
             }
-            .navigationTitle(PostTemplate.title)
+            .navigationTitle(self.post.title!)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup {

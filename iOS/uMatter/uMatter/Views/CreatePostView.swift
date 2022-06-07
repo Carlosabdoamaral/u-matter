@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct CreatePostView: View {
     
@@ -15,6 +16,9 @@ struct CreatePostView: View {
     @State private var _comments : Bool = false
     @State private var _date : Date = Date.now
     @AppStorage("isCreatingPost") private var isCreatingPost : Bool = false
+    
+    @Environment(\.managedObjectContext) var moc
+    @StateObject private var dataController = DataController()
     
     var body: some View {
         NavigationView {
@@ -49,13 +53,21 @@ struct CreatePostView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        CreatePostFunc()
+                        let post = Post(context: moc)
+                        post.title = self._title
+                        post.content = self._content
+                        post.id = UUID()
+                        post.date = Date.now
+                        try? moc.save()
+                        
+                        self.isCreatingPost = false
                     } label: {
                         Text("Post")
                     }
                 }
             }
         }
+        .environment(\.managedObjectContext, dataController.container.viewContext)
     }
 }
 
