@@ -11,8 +11,6 @@ import SwiftUI
 @main
 struct uMatterApp: App {
     @AppStorage("FinishOnBoarding") var finishOnBoarding : Bool = false
-    
-//    @StateObject private var dataController = DataController()
     let dataContainer = DataController.shared
     
     var body: some Scene {

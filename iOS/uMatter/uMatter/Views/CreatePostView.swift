@@ -58,6 +58,7 @@ struct CreatePostView: View {
                         post.content = self._content
                         post.id = UUID()
                         post.date = Date.now
+                        post.liked = false
                         try? moc.save()
                         
                         self.isCreatingPost = false

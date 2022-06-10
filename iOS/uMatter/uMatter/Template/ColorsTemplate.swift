@@ -8,4 +8,16 @@
 import Foundation
 import SwiftUI
 
-var colorsTemplate : [Color] = [.blue, .brown, .cyan, .gray, .green, .indigo, .mint, .orange, .pink, .purple, .primary, .red, .teal, .yellow ]
+var colorsTemplate : [Color] = [
+    Color.blue,
+    Color.pink,
+    Color.purple,
+    Color.green,
+    Color.orange,
+    Color.red,
+    Color.cyan,
+    Color.indigo,
+    Color.mint,
+    Color.teal,
+    Color.yellow
+]

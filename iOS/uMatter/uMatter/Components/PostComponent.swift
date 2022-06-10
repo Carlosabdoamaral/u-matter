@@ -47,38 +47,20 @@ struct PostComponent: View {
                 .multilineTextAlignment(.leading)
                 .lineLimit(4)
                 .foregroundColor(.primary)
-            
-            //ACTIONS
-            HStack {
-                if !liked {
-                    Image(systemName: "heart")
-                        .onTapGesture { self.liked.toggle() }
-                        .foregroundColor(.primary)
-                } else {
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.red)
-                        .onTapGesture { self.liked.toggle() }
-                }
-                
-                Spacer()
-                Image(systemName: "text.bubble")
-                    .foregroundColor(.primary)
-                
-                Spacer()
-                
-                Image(systemName: "paperplane")
-            }
-            .padding(.top, 5)
-            
-            
         }
         .padding()
     }
 }
 
 //struct PostComponent_Previews: PreviewProvider {
+//    @StateObject private var dataController = DataController()
+//    var post : Post = Post(context: self.dataController)
+//    post.n
+//    
 //    static var previews: some View {
-//        PostComponent()
+//        PostComponent(
+//        )
 //            .previewLayout(.sizeThatFits)
+//            .environment(\.managedObjectContext, dataController.container.viewContext)
 //    }
 //}

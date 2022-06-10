@@ -20,6 +20,11 @@
 		98F3183F27A48915008C50C3 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3183E27A48915008C50C3 /* PostDetailsView.swift */; };
 		98F3184627A48A07008C50C3 /* PostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98F3184427A48A07008C50C3 /* PostData.xcdatamodeld */; };
 		98F3184827A48A27008C50C3 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3184727A48A27008C50C3 /* PostModel.swift */; };
+		C0181E7D28539E5200BD9840 /* MessagesTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0181E7C28539E5200BD9840 /* MessagesTemplate.swift */; };
+		C0181E7F28539EF400BD9840 /* DailyMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0181E7E28539EF400BD9840 /* DailyMessageView.swift */; };
+		C0181E822853A4FC00BD9840 /* Nuosu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0181E812853A4FC00BD9840 /* Nuosu.ttf */; };
+		C0181E852853ADBB00BD9840 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0181E842853ADBB00BD9840 /* DateExtension.swift */; };
+		C0181E872853BA1700BD9840 /* Playfair.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0181E862853BA1600BD9840 /* Playfair.ttf */; };
 		C08BED30284EBF25003D2552 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08BED2F284EBF25003D2552 /* ProfileView.swift */; };
 		C0C0BD41284D997A004F035D /* PostTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0BD40284D997A004F035D /* PostTemplate.swift */; };
 		C0C0BD43284D99FD004F035D /* IconsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C0BD42284D99FD004F035D /* IconsTemplate.swift */; };
@@ -43,6 +48,12 @@
 		98F3183E27A48915008C50C3 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		98F3184527A48A07008C50C3 /* PostData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PostData.xcdatamodel; sourceTree = "<group>"; };
 		98F3184727A48A27008C50C3 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		C0181E7C28539E5200BD9840 /* MessagesTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessagesTemplate.swift; path = ../../../../../MessagesTemplate.swift; sourceTree = "<group>"; };
+		C0181E7E28539EF400BD9840 /* DailyMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyMessageView.swift; path = ../../../../../DailyMessageView.swift; sourceTree = "<group>"; };
+		C0181E812853A4FC00BD9840 /* Nuosu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nuosu.ttf; sourceTree = "<group>"; };
+		C0181E832853A51400BD9840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C0181E842853ADBB00BD9840 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ../../../../../DateExtension.swift; sourceTree = "<group>"; };
+		C0181E862853BA1600BD9840 /* Playfair.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Playfair.ttf; sourceTree = "<group>"; };
 		C08BED2F284EBF25003D2552 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = ../../../../../ProfileView.swift; sourceTree = "<group>"; };
 		C0C0BD40284D997A004F035D /* PostTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTemplate.swift; sourceTree = "<group>"; };
 		C0C0BD42284D99FD004F035D /* IconsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsTemplate.swift; sourceTree = "<group>"; };
@@ -81,6 +92,8 @@
 		98EEFB6E27A317C900356338 /* uMatter */ = {
 			isa = PBXGroup;
 			children = (
+				C0181E832853A51400BD9840 /* Info.plist */,
+				C0181E802853A4F100BD9840 /* Fonts */,
 				C0C0BD3F284D996B004F035D /* Template */,
 				98F3184027A48942008C50C3 /* Model */,
 				98EEFB8227A317F900356338 /* Data */,
@@ -119,6 +132,7 @@
 				98F3183E27A48915008C50C3 /* PostDetailsView.swift */,
 				C0E0D5F8284EB0590031FD9B /* ReportPostView.swift */,
 				C08BED2F284EBF25003D2552 /* ProfileView.swift */,
+				C0181E7E28539EF400BD9840 /* DailyMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +159,7 @@
 			children = (
 				98A184F227A3747400ABCA12 /* UIScreenExtension.swift */,
 				98A0324827A4B1B700B97D57 /* AccentColorGradientExtension.swift */,
+				C0181E842853ADBB00BD9840 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,12 +181,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C0181E802853A4F100BD9840 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C0181E862853BA1600BD9840 /* Playfair.ttf */,
+				C0181E812853A4FC00BD9840 /* Nuosu.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C0C0BD3F284D996B004F035D /* Template */ = {
 			isa = PBXGroup;
 			children = (
 				C0C0BD40284D997A004F035D /* PostTemplate.swift */,
 				C0C0BD42284D99FD004F035D /* IconsTemplate.swift */,
 				C0C0BD44284D9A36004F035D /* ColorsTemplate.swift */,
+				C0181E7C28539E5200BD9840 /* MessagesTemplate.swift */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -235,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EEFB7727A317CC00356338 /* Preview Assets.xcassets in Resources */,
+				C0181E822853A4FC00BD9840 /* Nuosu.ttf in Resources */,
+				C0181E872853BA1700BD9840 /* Playfair.ttf in Resources */,
 				98EEFB7427A317CC00356338 /* Assets.xcassets in Resources */,
 				98A184F727A38F1B00ABCA12 /* ImageAssets.xcassets in Resources */,
 			);
@@ -247,15 +274,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0181E7F28539EF400BD9840 /* DailyMessageView.swift in Sources */,
 				98A184F127A373D500ABCA12 /* OnBoardingView.swift in Sources */,
 				98F3184827A48A27008C50C3 /* PostModel.swift in Sources */,
 				98F3183F27A48915008C50C3 /* PostDetailsView.swift in Sources */,
 				98A184F327A3747400ABCA12 /* UIScreenExtension.swift in Sources */,
+				C0181E852853ADBB00BD9840 /* DateExtension.swift in Sources */,
 				98F3183D27A480FA008C50C3 /* CreatePostView.swift in Sources */,
 				98A184FD27A39C1100ABCA12 /* PostComponent.swift in Sources */,
 				98F3184627A48A07008C50C3 /* PostData.xcdatamodeld in Sources */,
 				C08BED30284EBF25003D2552 /* ProfileView.swift in Sources */,
 				C0C0BD43284D99FD004F035D /* IconsTemplate.swift in Sources */,
+				C0181E7D28539E5200BD9840 /* MessagesTemplate.swift in Sources */,
 				C0C0BD45284D9A36004F035D /* ColorsTemplate.swift in Sources */,
 				98A184FB27A398A900ABCA12 /* HomeView.swift in Sources */,
 				C0CFA14D284F9D790086EFBA /* DataController.swift in Sources */,
@@ -396,6 +426,7 @@
 				DEVELOPMENT_TEAM = 9Z86N6X4FM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = uMatter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,6 +456,7 @@
 				DEVELOPMENT_TEAM = 9Z86N6X4FM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = uMatter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

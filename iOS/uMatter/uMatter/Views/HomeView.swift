@@ -12,9 +12,11 @@ struct HomeView: View {
 //    @AppStorage("languageId") var languageId : Int = 0
     @AppStorage("isCreatingPost") private var isCreatingPost : Bool = false
     @AppStorage("isShowingPostDetails") var isShowingPostDetails : Bool = false
-    @State private var NavigationViewTitleText : String = "Home"
     
-    //MARK: REMOVER
+    @State private var NavigationViewTitleText : String = "Home"
+    @State private var isShowingMessage : Bool = false
+    
+    //MARK: REMOVER e puxar de um db
     @FetchRequest(sortDescriptors: []) var posts : FetchedResults<Post>
     
     func CreatePost() { self.isCreatingPost.toggle() }
@@ -42,18 +44,27 @@ struct HomeView: View {
                         }
                     }
                 }
+                .sheet(isPresented: $isShowingMessage) {
+                    self.isCreatingPost = false
+                } content: {
+                    DailyMessageView()
+                }
+
             }
             .navigationTitle("uMatter")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    HStack {
-                        Image(systemName: "plus")
-                            .onTapGesture(perform: CreatePost)
-                            .sheet(isPresented: $isCreatingPost, onDismiss: {
-                                self.isCreatingPost = false
-                            }) {
-                                CreatePostView()
-                            }
+                    Button {
+                        self.isShowingMessage = true
+                    } label: {
+                        Image(systemName: "text.bubble")
+                    }
+                    Image(systemName: "plus")
+                    .onTapGesture(perform: CreatePost)
+                    .sheet(isPresented: $isCreatingPost, onDismiss: {
+                        self.isCreatingPost = false
+                    }) {
+                        CreatePostView()
                     }
                 }
                 
@@ -63,7 +74,6 @@ struct HomeView: View {
                     } label: {
                         Image(systemName: "person.fill")
                     }
-
                 }
             }
         }
