@@ -11,7 +11,7 @@ public class PostModel {
     private Long post_id;
 
     @NotNull
-    @ManyToOne
+    @ManyToOne // Revisar relacao
     private PersonModel author;
 
     @NotNull

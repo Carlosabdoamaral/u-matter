@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 import java.util.Date;
 
 public interface PersonRepository extends JpaRepository<PersonModel, Long> {
-    @Query(value = "INSERT INTO person (deleted_account, start_date, uuid, plataform_plataform_id) VALUES (:deletedAccount, :startDate, :uuid, :plataform_id)", nativeQuery = true)
+    @Query(value = "INSERT INTO person(deleted_account, start_date, uuid, plataform_plataform_id) VALUES (:deletedAccount, :startDate, :uuid, :plataform_id)", nativeQuery = true)
     void createNewUser(
             @Param("uuid") String uuid,
             @Param("plataform_id") Long plataform_id,
