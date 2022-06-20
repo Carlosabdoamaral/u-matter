@@ -6,6 +6,8 @@ import com.carlosamaral.backend.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import javax.swing.text.html.Option;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -35,15 +37,16 @@ public class PersonController {
         return HttpStatus.CREATED;
     }
 
-    @PutMapping("/block/{uuid}")
-    private HttpStatus blockAccount(@PathVariable String uuid) {
-        Double block = 3.0;
-        try {
-            _personRepository.blockPerson(uuid, block);
-            return HttpStatus.OK;
-        } catch (Error e) {
-            return HttpStatus.CONFLICT;
-        }
+    @PutMapping("/block/{id}")
+    private Optional<PersonModel> blockUser(@PathVariable("id") Long id) {
+        _personRepository.increaseBlockTime(id);
+        return _personRepository.findById(id);
+    }
+
+    @PutMapping("/desblock/{id}")
+    private Optional<PersonModel> desblockUser(@PathVariable("id") Long id) {
+        _personRepository.desblockUser(id);
+        return _personRepository.findById(id);
     }
 
     @DeleteMapping("/delete/{uuid}")
