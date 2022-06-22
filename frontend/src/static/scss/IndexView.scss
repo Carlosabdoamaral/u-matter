@@ -12,7 +12,7 @@ div.banner{
     font-family: 'Montserrat', sans-serif;
     height: 60vh;
     width: 70vw;
-    margin: 30vh auto 0 auto;
+    margin: 20vh auto 0 auto;
     text-align: center;
 }
 
@@ -43,3 +43,71 @@ div.banner > button{
 }
 
 /* </BANNNER> */
+
+/* <RESPONSIVE> */
+
+@media screen and(max-width: 770px){
+
+    div.banner > h1{
+        font-size: 35px;
+    }
+
+    div.banner > p{
+        font-size: 15px;
+    }
+
+    div.banner > button{
+        width: 200px;
+        font-size: 17px;
+    }
+}
+
+@media screen and(max-width: 680px){
+
+    div.banner > h1{
+        font-size: 25px;
+    }
+
+    div.banner > p{
+        font-size: 13px;
+    }
+
+    div.banner > button{
+        width: 170px;
+        font-size: 14px;
+    }
+}
+
+@media screen and(max-width: 485px){
+
+    div.banner > h1{
+        font-size: 20px;
+    }
+
+    div.banner > p{
+        font-size: 10px;
+    }
+
+    div.banner > button{
+        width: 150px;
+        font-size: 12px;
+    }
+}
+
+@media screen and(max-width: 395px){
+
+    div.banner > h1{
+        font-size: 15px;
+    }
+
+    div.banner > p{
+        font-size: 9px;
+    }
+
+    div.banner > button{
+        width: 120px;
+        font-size: 11px;
+    }
+}
+
+/* </RESPONSIVE> */
