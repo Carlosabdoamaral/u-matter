@@ -1,5 +1,45 @@
-.content {
-    small {
-        color: red;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+/* <BANNNER> */
+
+div.banner{
+    font-family: 'Montserrat', sans-serif;
+    height: 60vh;
+    width: 70vw;
+    margin: 30vh auto 0 auto;
+    text-align: center;
+}
+
+div.banner > h1{
+    color: #003180;
+    max-width: 800px;
+    margin: auto;
+    font-size: 40px;
+}
+
+div.banner > p{
+    font-weight: 300;
+    color: #003180;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 1.5em auto 1.5em auto;
+}
+
+div.banner > button{
+    font-size: 20px;
+    background-color: #D6EEFF;
+    color: #003180;
+    border: none;
+    border-radius: 30px;
+    padding: 1em;
+    font-weight: 750;
+    width: 250px;
+}
+
+/* </BANNNER> */
