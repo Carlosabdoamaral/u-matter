@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 *{
     padding: 0;
@@ -12,102 +12,56 @@ div.banner{
     font-family: 'Montserrat', sans-serif;
     height: 60vh;
     width: 70vw;
-    margin: 20vh auto 0 auto;
-    text-align: center;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-div.banner > h1{
-    color: #003180;
-    max-width: 800px;
-    margin: auto;
-    font-size: 40px;
-}
+    h1{
+        color: #003180;
+        max-width: 20em;
+        margin: 0 auto;
+        font-size: 2.5rem;
+        text-align: center;
+    }
 
-div.banner > p{
-    font-weight: 300;
-    color: #003180;
-    font-size: 20px;
-    max-width: 800px;
-    margin: 1.5em auto 1.5em auto;
-}
+    p{
+        font-weight: 300;
+        color: #003180;
+        font-size: 1.25rem;
+        max-width: 40em;
+        font-weight: 400;
+        margin: 1.5em auto 1.5em auto;
+        text-align: center;
+    }
 
-div.banner > button{
-    font-size: 20px;
-    background-color: #D6EEFF;
-    color: #003180;
-    border: none;
-    border-radius: 30px;
-    padding: 1em;
-    font-weight: 750;
-    width: 250px;
+    button{
+        font-size: 1.25rem;
+        background-color: #D6EEFF;
+        color: #003180;
+        border: none;
+        border-radius: 30px;
+        padding: 1em 2em;
+        font-weight: 700;
+        width: fit-content;
+    }
+
+    button:hover{
+        transition: 0.6s;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.199);
+        cursor: pointer;
+    }
 }
 
 /* </BANNNER> */
 
 /* <RESPONSIVE> */
 
-@media screen and(max-width: 770px){
+@media screen and(max-width: 768px){
 
-    div.banner > h1{
-        font-size: 35px;
-    }
-
-    div.banner > p{
-        font-size: 15px;
-    }
-
-    div.banner > button{
-        width: 200px;
-        font-size: 17px;
-    }
-}
-
-@media screen and(max-width: 680px){
-
-    div.banner > h1{
-        font-size: 25px;
-    }
-
-    div.banner > p{
-        font-size: 13px;
-    }
-
-    div.banner > button{
-        width: 170px;
-        font-size: 14px;
-    }
-}
-
-@media screen and(max-width: 485px){
-
-    div.banner > h1{
-        font-size: 20px;
-    }
-
-    div.banner > p{
-        font-size: 10px;
-    }
-
-    div.banner > button{
-        width: 150px;
-        font-size: 12px;
-    }
-}
-
-@media screen and(max-width: 395px){
-
-    div.banner > h1{
-        font-size: 15px;
-    }
-
-    div.banner > p{
-        font-size: 9px;
-    }
-
-    div.banner > button{
-        width: 120px;
-        font-size: 11px;
-    }
+    div.banner{
+        width: 85vw;
+    }    
 }
 
 /* </RESPONSIVE> */
