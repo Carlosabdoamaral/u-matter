@@ -1,3 +1,5 @@
+import imagemDev from "../static/files/img_desenvolvedor.png"
+
 export const QuemSomosWidget = _ => {
     return (
         <div className="quemSomos">
@@ -17,19 +19,19 @@ export const QuemSomosWidget = _ => {
             <div className="container">            
 
                 <div className="card">
-                    <img src="../files/img_desenvolvedor.png" alt="Foto CEO Carlos Amaral" />
+                    <img src= {imagemDev} alt="Foto CEO Carlos Amaral" />
                     <span>CEO | CTO</span>
                     <h2>Carlos Alberto Barcelos do Amaral</h2>
                 </div>
 
                 <div className="card">
-                    <img src="../files/img_desenvolvedor.png" alt="Foto Desenvolvedor Frederico" />
+                    <img src= {imagemDev} alt="Foto Desenvolvedor Frederico" />
                     <span>Dev. Fullstack</span>
                     <h2>Frederico Renan Monteiro Motolla</h2>
                 </div>
 
                 <div className="card">
-                    <img src="../files/img_desenvolvedor.png" alt="Foto Desenvolvedor Igor" />
+                    <img src= {imagemDev} alt="Foto Desenvolvedor Igor" />
                     <span>Dev. Fullstack</span>
                     <h2>Igor Luiz Belter Rosiak</h2>
                 </div>
