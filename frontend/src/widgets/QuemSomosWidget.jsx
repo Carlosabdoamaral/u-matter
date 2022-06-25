@@ -1,5 +1,4 @@
 import { teamData } from "../static/data/team"
-import imagemDev from "../static/files/img_desenvolvedor.png"
 
 export const QuemSomosWidget = _ => {
     return (

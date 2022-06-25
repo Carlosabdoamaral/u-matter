@@ -1,21 +1,22 @@
 import ImagemDev from "../files/img_desenvolvedor.png"
 
 export const teamData = [
-    {
-        name : "Igor Rosiak", 
-        area : "Dev. Fullstack", 
-        image : ImagemDev
-    },
 
     {
-        name : "Fred Renan", 
-        area : "Dev. Fullstack", 
-        image : ImagemDev
-    },
-
-    {
-        name : "Carlos Amaral", 
+        name : "Carlos Alberto Barcelos do Amaral", 
         area : "CEO | CTO", 
+        image : ImagemDev
+    },
+
+    {
+        name : "Frederico Renan Monteiro Motolla", 
+        area : "Dev. Fullstack", 
+        image : ImagemDev
+    },
+
+    {
+        name : "Igor Luiz Belter Rosiak", 
+        area : "Dev. Fullstack", 
         image : ImagemDev
     },
 ]
