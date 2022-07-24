@@ -1,7 +1,7 @@
-import { Route, Routes } from "react-router-dom"
-import IndexView from "./views/IndexView"
+import { Route, Routes } from "react-router"
+import {IndexView} from "./views/IndexView"
 
-export default function URLS() {
+export const _ROUTES = _ => {
     return (
         <Routes>
             <Route path="/" element={<IndexView/>}/>
